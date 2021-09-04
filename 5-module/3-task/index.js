@@ -1,4 +1,5 @@
 function initCarousel() {
+
   let carouselInner = document.querySelector('.carousel__inner');
   //create new data-attribute to count steps
   if ('count' in carouselInner.dataset === false) {
@@ -42,4 +43,5 @@ function initCarousel() {
   } else if (count != 3) {
     right.style.display = '';
   }
+
 }
