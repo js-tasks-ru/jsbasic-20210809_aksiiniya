@@ -14,19 +14,6 @@
  */
 
 
-let rows = [{
-    name: 'Вася',
-    age: 25,
-    salary: 1000,
-    city: 'Самара'
-  },
-  {
-    name: 'Петя',
-    age: 30,
-    salary: 1500,
-    city: 'Москва'
-  }
-];
 export default class UserTable {
   constructor(rows) {
     this.rows = rows;
@@ -58,6 +45,7 @@ export default class UserTable {
     }
     this.elem.append(tbody);
   }
+
   remove(event) {
     if (event.target.tagName === 'BUTTON') {
       event.target.closest('tr').remove();
@@ -65,7 +53,3 @@ export default class UserTable {
   }
 
 }
-
-
-let table = new UserTable(rows);
-document.body.appendChild(table.elem);
