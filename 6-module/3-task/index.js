@@ -70,27 +70,23 @@ export default class Carousel {
       }
 
     }));
-
-    let button = this._carousel.querySelector('.carousel__button');
+    console.log(inner.dataset.counter);
+    let button = this._carousel.querySelectorAll('.carousel__button');
+    console.log(button);
     let slide = this._carousel.querySelectorAll('.carousel__slide');
 
-    console.log(slide[2].dataset.id);
+    button.forEach(button =>
+      button.addEventListener('click', () => {
+        this._carousel.dispatchEvent(new CustomEvent("product-add", {
+          detail: slide[inner.dataset.counter].dataset.id,
+          bubbles: true
+        }));
 
+        console.log(slide);
+        console.log(slide[inner.dataset.counter].dataset.id);
 
-    button.addEventListener('click', () => {
-      this._carousel.dispatchEvent(new CustomEvent("product-add", {
-        detail: slide[inner.dataset.counter].dataset.id,
-        bubbles: true
       }));
-
-      console.log(slide);
-      console.log(slide[inner.dataset.counter].dataset.id);
-
-    });
-
-
   }
-
 
   get elem() {
     return this._carousel;
