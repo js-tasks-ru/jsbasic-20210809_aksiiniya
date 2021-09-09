@@ -30,14 +30,13 @@ export default class Modal {
 
     //Keydown
     function onkeydown(event) {
-      console.log(this);
+      // console.log(this);
       if (event.code === "Escape") {
-        console.log(this);
-
+        // console.log(this);
         this.close();
       }
     }
-
+    //bind this означает что мы привязали контекст modal, чтобы вызывался метод close
     document.body.onkeydown = onkeydown.bind(this);
   }
 
