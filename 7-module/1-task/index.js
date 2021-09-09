@@ -81,7 +81,6 @@ export default class RibbonMenu {
       this._ribbon.dispatchEvent(new CustomEvent('ribbon-select', {
         detail: link.dataset.id,
         bubbles: true
-
       }));
       console.log(link.dataset.id);
 
