@@ -86,6 +86,7 @@ export default class Carousel {
         console.log(slide[inner.dataset.counter].dataset.id);
 
       }));
+
   }
 
   get elem() {
