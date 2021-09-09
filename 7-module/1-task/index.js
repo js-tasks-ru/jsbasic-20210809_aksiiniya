@@ -97,6 +97,4 @@ export default class RibbonMenu {
     return this._ribbon;
   }
 
-  }
-
 }
