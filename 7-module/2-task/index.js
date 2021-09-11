@@ -2,6 +2,7 @@ import createElement from '../../assets/lib/create-element.js';
 
 export default class Modal {
   constructor() {
+
     this._modal = createElement(`<div class="modal">
       <div class="modal__overlay"></div>
       <div class="modal__inner">
@@ -64,5 +65,6 @@ export default class Modal {
     this._modal.remove();
     document.body.classList.remove("is-modal-open");
     document.removeEventListener("keydown", this.onkeydown);
+
   }
 }
