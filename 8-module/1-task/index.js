@@ -43,7 +43,7 @@ export default class CartIcon {
 
   updatePosition() {
     //main element
-    if (document.querySelector(".cart-icon").classList.contains('cart-icon_visible')) {
+    if (document.querySelector(".cart-icon") !==null && document.querySelector(".cart-icon").classList.contains('cart-icon_visible')) {
       let cardHolder = document.querySelector(".cart-icon");
       //at first it is 0, then - 57, 62it means we see this icon
 
