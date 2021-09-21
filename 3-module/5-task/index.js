@@ -17,7 +17,7 @@ function getMinMax(str) {
   //*use unary plus to turn template string into number
   let result = {
     min: +`${sortArr[0]}`,
-    max: +`${sortArr[sortArr.length -1]}`
+    max: +`${sortArr[sortArr.length - 1]}`
   };
   //*return obj
   return result;
